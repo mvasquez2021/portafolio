@@ -29,22 +29,15 @@ section h2 {
     margin-bottom: 26px;
     font-size: 3.6rem;
     text-align: center;
-    text-shadow: 2px 5px 2px rgb(92, 167, 202);
 }
 
-/*
-HELPERS
-*/
+/*HELPERS*/
 .flex {
     display: flex;
 }
 
 .justify-between {
     justify-content: space-between;
-}
-
-.justify-space-evelyn {
-    justify-content: space-evenly;
 }
 
 .align-center {
@@ -62,6 +55,7 @@ LAYOUT
     max-width: 960px;
     width: 100%;
     margin: auto;
+    overflow: hidden;
 }
 
 /*
@@ -75,10 +69,6 @@ BANNER
     width: 100%;
 }
 
-.banner img:hover {
-    filter: grayscale(80%);
-}
-
 .banner h1,
 .banner h2 {
     position: absolute;
@@ -90,7 +80,6 @@ BANNER
     width: 100%;
     font-size: 6.4rem;
     text-align: center;
-    text-shadow: 2px 5px 2px rgb(92, 167, 202);
 }
 
 .banner h2 {
@@ -103,9 +92,7 @@ BANNER
     background: rgba(114, 153, 254, 0.5);
 }
 
-/*
-SKILLS
-*/
+/*SKILLS*/
 .skills {
     padding: 28px 104px 86px;
     background: #7299fe;
@@ -117,7 +104,7 @@ SKILLS
 
 .skills .bar,
 .skills .bar div {
-    /*border-radius: 8px;*/
+    border-radius: 8px;
 }
 
 .skills .bar {
@@ -151,9 +138,7 @@ SKILLS
     padding-left: 10px;
 }
 
-/*
-SERVICES
-*/
+/*SERVICES*/
 .services {
     padding: 30px 182px 76px;
     background: #fb7171;
@@ -163,20 +148,12 @@ SERVICES
     margin-bottom: 54px;
 }
 
-.services .item{
-    width: 33.33%;
-}
-
 .services .row:last-child {
     margin-bottom: 0;
 }
 
 .services .item img{
    margin: 0 auto 15px;
-}
-
-.services h3{
-   text-align: center;
 }
 
 /*
@@ -199,21 +176,14 @@ PORTFOLIO
 .portfolio .row:last-child figure {
     margin-bottom: 0;
 }
-.portfolio img:hover {
-    filter: blur(5px);
-}
 
-/*
-CLIENTS
-*/
+/*CLIENTS*/
 .clients {
     padding: 36px 70px 98px;
     background:  #3f4e62;
 }
 
-/*
-CONTACT
-*/
+/*CONTACT*/
 .contact {
     padding: 34px 100px 76px;
     background: #16a085;
@@ -221,7 +191,7 @@ CONTACT
 
 .contact input,
 .contact textarea {
-    padding: 10px  5px;
+    padding: 10px 5px;
     width: 100%;
 }
 
@@ -231,40 +201,49 @@ CONTACT
 }
 
 .contact button {
+    width: 100%;
     padding: 20px;
     background: #233451;
     color: #fff;
     border: 0;
-    cursor: pointer; 
- }
+    cursor: pointer;
+}
 
 .contact .row {
-     margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 .contact .row:last-child {
     margin-bottom: 0;
-    justify-content: center;
 }
 
 .contact .item {
     width: 100%;
 }
 
-.contact .item:first-child, .item:last-child {
+.contact .item:first-child {
     padding-right: 10px;
 }
 
-.contact textarea {
-    margin: 0px auto 0px;
+.contact .item:last-child {
+    padding-left: 10px;
+}
+
+.contact .item.no-padding {
+    padding: 0;
 }
 
 /*
 RESPONSIVE
 /*
-    XLARGE: 1480PX  LARGE: 1280px, MEDIUM: 980px,  SMALL: 680px,  XSMALL: 420px 
+    XLARGE: 1480PX
+    LARGE: 1280px,
+    MEDIUM: 980px,
+    SMALL: 680px,
+    XSMALL: 420px 
 */
 
+/**/
 @media(min-width:0) and (max-width:980px) {
     /*
     GLOBALES
@@ -310,108 +289,10 @@ RESPONSIVE
     
     .skills .item {
         width: 100%;
+      
     }
 
     .skills .item:last-child {
         padding: 0;
-    }
-
-    /*
-        SERVICES
-    */
-    .services {
-        padding: 10px 5px 25px;
-        background: #fb7171;
-    }
-    
-    .services .row {
-        flex-wrap: wrap;
-        margin-bottom: 0px;
-    }
-    
-    .services .item img{
-       margin: 0 auto 15px;
-    }
-    
-    .services h3{
-       text-align: center;
-    }
-    .services .item{
-        width: 100%;
-        margin-bottom: 20px;
-    }
-
-    /*
-    PORTFOLIO
-    */
-    .portfolio {
-        padding: 42px 10px 20px;
-        background: #ffd233;
-    }
-
-    .portfolio .row{
-        flex-wrap: wrap;
-    }
-
-    .portfolio figure {
-        margin-right: 0;
-        width: 100%;
-        margin-bottom: 10px;
-    }
-
-     .portfolio img{
-        width: 80%;
-        margin: 0 auto 10px;
-    }
-  
-    .portfolio .row:last-child figure {
-        margin-bottom: 10px;
-    }
- 
-    /*
-    CLIENTS
-    */
-    .clients {
-        padding: 42px 10px 20px;
-        background:  #3f4e62;
-    }
-    .clients .row{
-        flex-wrap: wrap;
-    }
-    .clients figure{
-        width: 100%;
-
-    }
-    .clients img{
-        width: 50%;
-        margin: 0 auto 20px;
-    }
-
-    /*
-    CONTACT
-    */
-    .contact {
-        padding: 42px 10px 20px;
-        background: #16a085;
-    }
-
-    .contact form{
-        display: flex;
-        flex-wrap: wrap;
-    }
-    
-    .contact input,
-    .contact textarea,  .contact .row, .contact .item .conctact button{
-        width: 100%;
-        flex-direction: column;
-        margin: 5px;
-        text-align: center;
-    }
-  
-    .contact button{
-        width:100%;
-        background: #233451;
-        /*margin-left: auto;
-        margin-right: auto;*/
     }
 }

@@ -115,7 +115,7 @@
       <!--section portfolio-->
       <section class="portfolio" title="Algunas páginas Desarrolladas">
         <h2>Portafolio</h2>
-        <div class="row flex justify-center">
+        <div class="row flex">
           <figure>
             <img src="./images/portafolio/image1.png" alt="FACEBOOK" />
           </figure>
@@ -129,7 +129,7 @@
             <img src="./images/portafolio/image4.png" alt="COCA" />
           </figure>
         </div>
-        <div class="row flex justify-center">
+        <div class="row flex">
           <figure>
             <img src="./images/portafolio/image5.png" alt="SPRITE" />
           </figure>
@@ -168,22 +168,18 @@
         <form action="">
           <div class="row flex justify-between">
             <div class="item">
-              <input
-                type="text"
-                placeholder="Nombre"
-                pattern="[a-zA-Z]{5,30}"
-                required
-              />
+              <input type="text" placeholder="Nombre" pattern="[a-zA-Z]{5,30}" required/>
             </div>
             <div class="item">
-              <input
-                type="text"
-                placeholder="Apellido"
-                pattern="[a-zA-Z]{5,30}"
-                required
-              />
+                <input
+                  type="text"
+                  placeholder="Apellido"
+                  pattern="[a-zA-Z]{5,30}"
+                  required
+                />
             </div>
           </div>
+
           <div class="row flex justify-between">
             <div class="item">
               <input type="email" placeholder="Email" required />
@@ -197,8 +193,9 @@
               />
             </div>
           </div>
+          
           <div class="row flex justify-between">
-            <div class="item no-padding">
+            <div class="item">
               <textarea
                 name=""
                 id=""
@@ -209,10 +206,8 @@
               ></textarea>
             </div>
           </div>
-          <div class="row flex justify-center">
-            <div>
+          <div class="row flex justify-between">
               <button>ENVIAR</button>
-            </div>
           </div>
         </form>
       </section>
